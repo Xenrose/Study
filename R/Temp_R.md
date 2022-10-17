@@ -62,11 +62,17 @@ ___
     * `round(mean(T))` - 이런식의 사용도 가능
 * `sample(x, size, replace = FALSE, prob = NULL)` - x 변수에서 size값 만큼의 갯수를 출력해줌
     * replace 파라미터가 False일 경우 - 비복원 표본 추출 / True일 경우 복원 표본 추출
-    * 
+    * prob - 각 원소별 가중치를 더하는 값  
+    ex) `  dice = sample(1:6, 2, TRUE, prob = c(1/8,1/8,1/8,1/8,1/8,3/8))`
+    각 원소별로 대치되며 6의 빈도수가 다른 숫자의 빈도수보다 더 많이 출력됨
 
 * `args(function)` - function에 대한 파라미터 출력
 
-* `?function` - function에 대한 함수 설명을 출력 (기본 내장함수에 대해서만 출력)
+* `?function` - function에 대한 함수 설명을 출력 (기본 내장함수에 대해서만 출력)  
+
+* `is.vector(var)` - var 가 vector 객체 유무를 반환
+
+* `length(var)` - var의 길이를 반환
 ___
 ## 함수 생성
 * 함수의 return 값은 코드의 가장 마지막줄이 된다.  
@@ -134,12 +140,18 @@ x 벡터 값의 갯수를 y 축에 표기
 
 ___
 ## 객체
-1. Vector  
-    temp_vector = 1:6
+1. atomic Vector  
+    * temp_vector = 1:6
+    * temp_c = c(1,2,3,4,5,6)
+    * 실수, 정수, 문자, 논리, 복소수, 원시형 6가지 자료형의 원자벡터가 있다.
 
-2. concatenate (python의 list와 유사)  
-    temp_c = c(1,2,3,4,5,6)
-
+    * 숫자 옆에 L을 입력하면 정수형 벡터 생성  
+    `int = 100L`
+    * 쌍따옴표로 묶으면 문자형 벡터 생성  
+    `text = "temp"`
+    
+2. 
+    
 3. 
 ___
 ## 반복문 (replicate)
