@@ -155,7 +155,7 @@ ___
     > raw(3)  
     > [1] 00 00 00
 
-    
+
 
 2. 
     
@@ -167,3 +167,14 @@ ___
 function() 함수 및 식을 i번 반복한다
 
 ___
+
+## 속성
+1. 이름
+```
+> names(die) = c("one", "two", "trhee", "four", "five", "six")
+> names(die)
+[1] "one"   "two"   "trhee" "four"  "five"  "six"  
+> die
+  one   two trhee  four  five   six 
+    1     2     3     4     5     6 
+```
